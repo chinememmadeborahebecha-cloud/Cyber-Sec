@@ -1,15 +1,14 @@
 # Project Title:  Lab Setup: Deploy Virtual Machines
-## Project Supervisor: Norbert Ephraim
- *Prepared By: Daniel Akpan  21/07/2025*
+## Project Supervisor: Mr Cornelius Micheal
+ *Prepared By: Ebecha Chinememma Deborah 28/05/2026*
 
 ## 1. Project Overview
-Virtual machines (VMs) are essential tools used to create isolated and virtualized environments that allow multiple operating systems to run on a single physical computer. These environments are valuable for various purposes, such as software testing, malware analysis, and cybersecurity training.
-By completing this exercise, you will develop essential skills in creating and managing virtual machines for various purposes. This exercise prepares you to work in various IT roles, including cybersecurity, where virtual machines are commonly used for malware analysis, penetration testing, and secure software testing.
+Virtual Machines (VMs) serve as foundational technologies for architecting isolated, virtualized environments, enabling the concurrent operation of multiple operating systems on a single physical host. These environments are instrumental across diverse technical domains, including rigorous software validation, malware forensics, and advanced cybersecurity simulations. Through the completion of this exercise, participants will cultivate technical proficiency in the deployment and administration of virtualized infrastructure. This training provides a critical prerequisite for specialized IT and cybersecurity roles, where VMs are indispensable for penetration testing, threat analysis, and the secure evaluation of software systems.
 
 ## 2. Project Goals
-- The goal is to install a Hypervisor on your computer (host).
-- Set up two virtual machines (Kali Linux and Windows 10) on it.
-- Configure the virtual machines to be on an isolated network.
+Hypervisor Deployment: Install and configure a Type-2 hypervisor on the host workstation to facilitate the virtualization layer.
+System Provisioning: Deploy and initialize two distinct virtual environments: a Kali Linux instance for security auditing and a Windows 10 instance for target analysis.
+Network Architecture: Configure a dedicated, isolated virtual network to enable secure communication between the guest systems while ensuring complete separation from the host and external network environments.
 
 ## 3. Lab Design & Considerations
 
@@ -159,22 +158,20 @@ Successful response with <1ms latency
 ## 6. Postmortem & Lessons Learned
 
 ### What Went Well:
-
-- VirtualBox’s NAT Network worked effectively for isolation.
-- OS installation was smooth.
-- Internal ping test confirmed correct VM communication setup.
+-Effective Network Segmentation: The utilization of VirtualBox’s NAT Network architecture successfully facilitated robust environmental isolation, ensuring the integrity of the virtualized perimeter.
+-Seamless System Deployment: The installation and initialization of the guest operating systems were executed without incident, resulting in a stable and operational virtualized environment.
+-Validation of Intra-Network Connectivity: Successful internal ICMP reachability assessments validated the accuracy of the network configuration and confirmed the intended communication paths between the virtual instances.
 
 ### Challenges:
-- Initial misconfiguration by selecting "NAT" instead of "NAT Network".
-- Needed to configure the NAT Network settings to enable DHCP manually.
+-Network Interface Discrepancy: Initial deployment encountered a configuration oversight wherein the standard "NAT" interface was selected in lieu of the "NAT Network" protocol. This necessitated a reassessment of the networking architecture to ensure multi-node communication within the isolated segment.
+-Manual Service Provisioning: To facilitate automated IP addressing within the virtualized environment, it was necessary to perform manual administrative configuration of the NAT Network parameters to properly initialize and enable DHCP (Dynamic Host Configuration Protocol) services.
 
 ### Key Takeaways:
-- Networking mode selection is critical to VM isolation.
-- Hands-on VM setup builds foundational skills for penetration testing labs and malware analysis environments.
-- Understanding hypervisor networking is essential for real-world cybersecurity lab design.
+-Strategic Network Segmentation: The precise selection of networking modes is paramount to achieving robust virtual machine isolation, a critical factor in maintaining the security and integrity of the virtualized environment.
+-Technical Proficiency in Lab Provisioning: Practical experience in the deployment and administration of virtualized systems establishes the foundational competencies necessary for architecting complex environments dedicated to penetration testing and malware forensics.
+-Architectural Mastery of Hypervisor Networking: A comprehensive understanding of hypervisor networking architectures serves as an indispensable prerequisite for the design and implementation of professional-grade cybersecurity research and development laboratories.
 
 ## 7. References
-
 - VirtualBox Documentation     https://www.virtualbox.org/manual/
 - Microsoft Windows ISO Download    https://www.microsoft.com/software-download/
 - Kali Linux ISO Download    https://www.kali.org/get-kali/#kali-platforms
